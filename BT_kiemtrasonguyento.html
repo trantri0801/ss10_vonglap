@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BT Kiểm tra số nguyên tố</title>
+</head>
+<body>
+    <input type="button" value="Bấm đi rồi biết" onclick="bangsonguyento()"  /><br />
+</body>
+<script>
+    function bangsonguyento()
+    {
+        var M = prompt("Nhập vào một số cần để in ra lượng số nguyên tố");
+        if (isNaN(M) || M === "") {
+            alert("Nhập lại");
+        }
+        var count = 1;
+        for(var n = 2; count <= M; n++) {
+            var flag = true;
+            if (n == 2){
+                flag = true;
+            }
+            else if (n % 2 == 0){
+                flag = false;
+            }
+            else{
+                for (var i = 2; i < Math.sqrt(n); i+=2)
+                {
+                    if (n % i == 0){
+                        flag = false;
+                        break;
+                    }
+                }
+            }
+            if (flag == true){
+                document.write(" " + n);
+                count++;
+            }
+        }
+    }
+</script>
+</html>
