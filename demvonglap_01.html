@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BT đếm vòng lặp 01</title>
+</head>
+<body>
+<input type="button" value="Bấm đi rồi biết" onclick="anvodi()"  /><br />
+</body>
+<script>
+    function anvodi() {
+        for (var i = 1; i <= 100; i++) {
+                document.write(i);
+            if (i == 99) {
+                alert('Đã hoàn thành');
+                break;
+            }
+        }
+    }
+</script>
+</html>

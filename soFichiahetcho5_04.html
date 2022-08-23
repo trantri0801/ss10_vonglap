@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BT tìm số fibonacci chia hết cho 5</title>
+</head>
+<body>
+
+</body>
+<script>
+    let n1 = 0, n2 = 1;
+    var dem = n1 + n2;
+    var count = 1;
+    while (count <= 20) {
+        n1 = n2;
+        n2 = dem;
+        dem = n1 + n2;
+        count++;
+        if (dem % 5 == 0){
+            document.write("Số đầu tiên chia hết cho 5 trong dãy fibonacci là: " + dem);
+            break;
+        }
+    }
+</script>
+</html>

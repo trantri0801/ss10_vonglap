@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BT tính tổng 30 số đầu tiên chia hết cho 7</title>
+</head>
+<body>
+
+</body>
+<script>
+    var count = 1;
+    var tong = 0;
+    for(var n = 1; count <= 30; n++){
+        if (n%7 == 0){
+            tong = tong + n;
+            count++;
+            document.write(n +"; ");
+        }
+    }
+    document.write("<br>");
+    document.write("Tổng 30 số đầu tiên chia hết cho 7 là: " + tong);
+</script>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BT tính tổng 20 số đầu tiên trong dãy fibonacci</title>
+</head>
+<body>
+<!--Tổng là 10945-->
+</body>
+<script>
+    let n1 = 0, n2 = 1;
+    var dem = n1 + n2;
+    var count = 1;
+    var tong = n1+n2;
+    while (count <= 18) {
+        tong = tong + dem;
+        n1 = n2;
+        n2 = dem;
+        dem = n1 + n2;
+        count++;
+    }
+    document.write("Tổng 20 số đầu tiên trong dãy fibonacci là: " + tong);
+</script>
+</html>
