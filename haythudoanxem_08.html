@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BT hãy thử đoán xem</title>
+</head>
+<body>
+<input type="button" value="Bấm đi rồi biết" onclick="doanso()"  /><br />
+</body>
+<script>
+    function doanso() {
+        do {
+            var min = prompt("Nhập vào số đầu tiên trong khoảng");
+        } while (isNaN(min) || min === "");
+        do {
+            var max = prompt("Nhập vào số cuối cùng trong khoảng");
+        } while (isNaN(max) || max === "" || parseInt(min) > parseInt(max));
+        min = parseInt(min);
+        max = parseInt(max);
+        var ramdom = Math.floor(Math.random() * (max - min + 1)) + min;
+        do {
+            var dem = prompt("Nhập vào số ngẫu nhiên trong khoảng trên");
+            if (dem == ramdom){
+                alert("Chúc mừng bạn đã đoán chính xác");
+            } else if (dem < ramdom){
+                alert("Số bạn chọn nhỏ hơn số ngẫu nhiên " + ramdom);
+            } else {
+                alert("Số bạn chọn lớn hơn số ngẫu nhiên " + ramdom);
+            }
+        } while (dem != ramdom);
+    }
+</script>
+</html>
